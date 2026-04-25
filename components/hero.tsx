@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 export function Hero() {
@@ -5,6 +6,18 @@ export function Hero() {
     <section className="relative overflow-hidden bg-[var(--verde-sicredi)] text-white py-20 px-4">
       <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-white/10 pointer-events-none" />
       <div className="absolute -bottom-24 -left-16 w-80 h-80 rounded-full bg-white/10 pointer-events-none" />
+
+      {/* logo no topo */}
+      <div className="relative max-w-4xl mx-auto flex justify-center mb-8">
+        <Image
+          src="/sicredi-logo.png"
+          alt="Sicredi"
+          width={120}
+          height={40}
+          className="brightness-0 invert"
+          priority
+        />
+      </div>
 
       <div className="relative max-w-4xl mx-auto text-center">
         <p className="text-[var(--verde-claro)] text-sm font-semibold uppercase tracking-widest mb-4">

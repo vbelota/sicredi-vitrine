@@ -1,11 +1,19 @@
+import Image from "next/image";
+
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="bg-[var(--verde-escuro)] text-white/80 py-10 px-4 mt-auto">
       <div className="max-w-4xl mx-auto text-center space-y-4">
-        <div className="text-2xl font-bold text-white">
-          S<span className="text-yellow-400">i</span>credi
+        <div className="flex justify-center">
+          <Image
+            src="/sicredi-logo.png"
+            alt="Sicredi"
+            width={140}
+            height={48}
+            className="brightness-0 invert"
+          />
         </div>
         <p className="text-sm">
           Construído em um fim de semana com Claude Code no Summit Jovem Sicredi 2026.
@@ -22,7 +30,7 @@ export function Footer() {
           <a href="#vitrine" className="hover:text-white transition-colors">
             Explorar vitrine
           </a>
-          <a href="mailto:comitejovem@sicredi.com.br" className="hover:text-white transition-colors">
+          <a href="/cadastrar" className="hover:text-white transition-colors">
             Cadastre seu negócio
           </a>
         </div>
